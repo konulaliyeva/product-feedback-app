@@ -1,0 +1,19 @@
+.wrap_home {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.page_left{
+  flex: 30%;
+}
+
+.page_right{
+  flex: 70%;
+}
+body{
+  background: #F2F2F2;
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+
+}

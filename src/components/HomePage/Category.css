@@ -1,0 +1,23 @@
+.category_board {
+  margin-top: 20px;
+  width: 255px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding-top: 30px !important;
+}
+.catg_btn{
+    color: #4661E6;
+    border: none;
+    background: #f2f4ff;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+.catg_btn:hover {
+    background: #CFD7FF;
+
+}
+.active {
+    background-color: #4661E6;
+    color: #fff;
+}

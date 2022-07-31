@@ -1,0 +1,25 @@
+.btn-back {
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    position: relative;
+    left: 23%;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #647196;
+    text-decoration: none;
+}
+.fa-angle-left{
+    color:  #4661E6;
+}
+
+
+.wrapper_feedback{
+    display: flex;
+    flex-direction: column;
+    font-family: "Jost", sans-serif;
+    margin: 20px 200px;
+    
+}

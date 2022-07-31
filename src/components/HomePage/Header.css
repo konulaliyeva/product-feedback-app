@@ -1,0 +1,33 @@
+.header_container {
+  background: #373f68;
+  border-radius: 10px;
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+}
+.header_left {
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.suggestions,
+.fas {
+  font-size: 1.2rem;
+}
+
+.add_btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #f2f4fe;
+  background: #ad1fea;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+}
+.add_btn:hover {
+  color: #f2f4fe;
+}
