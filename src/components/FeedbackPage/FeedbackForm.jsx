@@ -9,11 +9,11 @@ function FeedbackForm() {
 
 
   async function handleSubmit(event) {
-      const requestBody = {"id": Math.random(),
-      "title":  setTitle(event.target.value),
-      "details": setDetails(event.target.value),
-  } 
+      event.preventDefault();
+      const requestBody = {title, details}
       await axios.post('/feedbacks', requestBody).then(response => console.log(response));
+      setTitle('');
+      setDetails('');
     
   }
 
@@ -32,7 +32,7 @@ function FeedbackForm() {
           <label className="pb-3" htmlFor="">
             Add a short, descriptive headline
           </label>
-          <input type="text" className="feedback-input" value={title}/>
+          <input type="text" className="feedback-input" value={title} onChange={(e)=>setTitle(e.target.value)}/>
         </div>
 
         <div className="feedback_category">
@@ -48,7 +48,7 @@ function FeedbackForm() {
             Include any specific comments on what should be improved, added,
             etc.
           </label>
-          <input className="feedback_details_input" type="text" value = {details} required />
+          <input className="feedback_details_input" type="text" value = {details} onChange={(e)=>setDetails(e.target.value)} required />
         </div>
 
         <div className="feedback_buttons pt-5 pb-4">
