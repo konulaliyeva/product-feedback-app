@@ -1,11 +1,23 @@
 import React from "react";
-import Body from "./components/HomePage/Body";
-import Category from "./components/HomePage/Categroy";
-import FeedbackBoard from "./components/HomePage/FeedbackBoard";
-import Header from "./components/HomePage/Header";
-import Roadmap from "./components/HomePage/Roadmap";
-import "./HomePage.css"
+import { useState, useEffect } from "react";
+import FeedbackBoard from "./Components/HomePage/FeedbackBoard";
+import Category from "./Components/HomePage/Categroy";
+import Roadmap from "./Components/HomePage/Roadmap";
+import Header from "./Components/HomePage/Header";
+import "./HomePage.css";
+
 function HomePage() {
+
+  // const [feedbacks, setFeedbacks] = useState([])
+
+  // useEffect(() => {
+
+  
+
+  // }, []);
+
+
+
   return (
     <div className="container wrap_home">
       <div className="page_left">
@@ -15,8 +27,7 @@ function HomePage() {
       </div>
       <div className="page_right">
         <Header />
-        <Body />
-
+        {/* <Body /> */}
       </div>
     </div>
   );

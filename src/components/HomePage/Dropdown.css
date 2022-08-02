@@ -46,13 +46,7 @@
     align-items: baseline;
 
   }
-  .fa-check {
-    color: #ad1fea;
-    display: none;
-  }
-  .show-check{
-    display: block;
-  }
+
 
   .dropdown_select{
     display: flex;

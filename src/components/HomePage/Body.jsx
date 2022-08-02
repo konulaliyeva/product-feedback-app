@@ -1,26 +1,29 @@
 import React from "react";
-import "./Body.css"
-function Body (){
+import "./Body.css";
+function Body({ feedbackBody }) {
+  return feedbackBody.map((content) => {
     return (
-        <div className="suggestion_container">
-           <div className="suggestion_content">
-           <div className="number">
-            <i className="fa-solid fa-angle-up"></i>
-            <p>112</p>
-           </div>
-           <div className="content">
-               <h4>Add tags for solution</h4>
-               <p>Easier to search  fro solutions based on a specific task</p>
-               <button>Feature</button>
-
-           </div>
-           <div className="comment">
-           <i className="fas fa-comment"></i>
-           2
-           </div>
-           </div>
+      <div key={content.id} className="suggestion_container">
+        <div className="suggestion_content">
+          <div className="container_number_content">
+            <button className="number">
+              <i className="fa-solid fa-angle-up"></i>
+              <p>{content.vote}</p>
+            </button>
+            <div className="content">
+              <h4>{content.title}</h4>
+              <p>{content.details}</p>
+              <button>{content.tag}</button>
+            </div>
+          </div>
+          <div className="comment">
+            <i className="fas fa-comment"></i>
+            <span>{content.comment}</span>
+          </div>
         </div>
-    )
+      </div>
+    );
+  });
 }
 
 export default Body;

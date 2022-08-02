@@ -1,0 +1,36 @@
+{
+  "feedbacks": [
+    {
+      "id": 10,
+      "title": "Add tags for solution",
+      "details": "Easier to search for solutions based on a specific stack.",
+      "tag": "Enhancement",
+      "vote": "112",
+      "comment": "4"
+    },
+    {
+      "id": 11,
+      "title": "More comprehensive reports",
+      "details": "It would be great to see a more detailed breakdown of solutions.",
+      "tag": "Feature",
+      "vote": "123",
+      "comment": "2"
+    },
+    {
+      "id": 12,
+      "title": "Add a dark theme option",
+      "details": "It would help people with light sensitivities and who prefer dark mode.",
+      "tag": "Feature",
+      "vote": "101",
+      "comment": "7"
+    },
+    {
+      "id": 13,
+      "title": "Add micro-interactions",
+      "details": "Small animations at specific points can add delight.",
+      "tag": "Enhancement",
+      "vote": "71",
+      "comment": "5"
+    }
+  ]
+}

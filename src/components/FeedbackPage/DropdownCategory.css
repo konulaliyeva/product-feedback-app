@@ -27,11 +27,12 @@
 .votes_feedback {
   background: #f7f8fd;
   border:none;
+  outline: none;
   border-radius: 5px;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   display: flex;
-  justify-content: flex-end;
+ justify-content: space-between;
 }
 .hideDrop {
   display: none;
@@ -47,7 +48,6 @@
 }
 .fa-check {
   color: #ad1fea;
-  display: none;
 }
 .show-check {
   display: block;

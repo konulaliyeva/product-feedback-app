@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import FeedbackForm from "./components/HomePage/Feedback/FeedbackForm";
+import FeedbackForm from "./Components/FeedbackPage/FeedbackForm";
 import "./Feedback.css";
 function Feedback() {
   return (

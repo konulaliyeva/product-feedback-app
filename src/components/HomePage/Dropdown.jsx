@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRef, useState } from "react";
 import "./Dropdown.css";
+
 function Dropdown() {
   const dropdownRef = useRef();
   const [openDropwdown, setOpenDropdown] = useState(false);
-  const [checkmark, setCheckmark] = useState(false);
   const handleOpenDropdown = () => {
     setOpenDropdown(!openDropwdown);
   };
-  const dropwdownList = [
-    "Most Upvotes",
-    "Least Upvotes",
-    "Most Comments",
-    "List Comments",
-  ];
-  useState(() => {
+
+  const [dropwdownList, setDropwdownList] = useState([
+    { id: 1, value: "Most Upvotes", isSelected: false },
+    { id: 2, value: "Least Upvotes", isSelected: false },
+    { id: 3, value: "Most Comments", isSelected: false },
+    { id: 4, value: "List Comments", isSelected: false },
+  ]);
+
+  useEffect(() => {
     function handleOutsideClick(event) {
       if (!dropdownRef.current.contains(event.target)) {
         setOpenDropdown(false);
@@ -27,11 +29,18 @@ function Dropdown() {
     };
   });
 
-  const handleSelectButton = (index) => {
-   console.log(index);
-    setCheckmark(!checkmark);
+  const handleSelectButton = (id) => {
+    let updatedList = dropwdownList.map((item) => {
+      if (item.id === id) {
+        return { ...item, isSelected: !item.isSelected };
+      }
+      return item;
+    });
+
+    setDropwdownList(updatedList);
+    setTimeout(() => setOpenDropdown(false), 100);
   };
- 
+
   return (
     <>
       <div ref={dropdownRef} className="dropdown_container">
@@ -51,16 +60,17 @@ function Dropdown() {
             openDropwdown ? "openDrop" : "hideDrop"
           } `}
         >
-          {dropwdownList.map((listItem, index) => {
+          {dropwdownList.map((listItem) => {
             return (
-              <div key={index} className="btn_container pb-3">
+              <div key={listItem.id} className="btn_container pb-3">
                 <button
                   className="vote_btn"
-                  onClick={() => handleSelectButton(index)}
+                  onClick={() => handleSelectButton(listItem.id)}
                 >
-                  {listItem}
+                  {listItem.value}
                 </button>
-                <i className="fa-solid fa-check mx-3"></i>
+
+                {listItem.isSelected && <i className="fa-solid fa-check mx-3"></i>}
               </div>
             );
           })}
