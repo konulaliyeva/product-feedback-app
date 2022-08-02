@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import FeedbackBoard from "./Components/HomePage/FeedbackBoard";
-import Category from "./Components/HomePage/Categroy";
+import Category from "./Components/HomePage/Category";
 import Roadmap from "./Components/HomePage/Roadmap";
 import Header from "./Components/HomePage/Header";
 import "./HomePage.css";
