@@ -1,29 +1,33 @@
 import React from "react";
 import "./Body.css";
-function Body({ feedbackBody }) {
-  return feedbackBody.map((content) => {
-    return (
-      <div key={content.id} className="suggestion_container">
+import { Link } from "react-router-dom";
+function Body() {
+  return (
+    <Link to="/feedback-detail" style={{ textDecoration: "none" }}>
+      <div className="suggestion_container">
         <div className="suggestion_content">
           <div className="container_number_content">
             <button className="number">
               <i className="fa-solid fa-angle-up"></i>
-              <p>{content.vote}</p>
+              <p>123</p>
             </button>
             <div className="content">
-              <h4>{content.title}</h4>
-              <p>{content.details}</p>
-              <button>{content.tag}</button>
+              <h4>Nese</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
+                magnam, nulla sequi delectus excepturi eveniet.
+              </p>
+              <button>Bug</button>
             </div>
           </div>
           <div className="comment">
             <i className="fas fa-comment"></i>
-            <span>{content.comment}</span>
+            <span>3</span>
           </div>
         </div>
       </div>
-    );
-  });
+    </Link>
+  );
 }
 
 export default Body;

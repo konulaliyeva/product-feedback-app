@@ -1,7 +1,7 @@
 import React from "react";
-import Dropdown from "./Dropdown";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
+import Dropdown from "./Dropdown.jsx"
 function Header() {
   
   return (
@@ -10,7 +10,6 @@ function Header() {
         <i className="fas fa-lightbulb"></i>
         <p className="suggestions">6 Suggetions</p> 
         <Dropdown />
-
       </div>
 
       <div className="header_right">

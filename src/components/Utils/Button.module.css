@@ -1,0 +1,35 @@
+.Button {
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 13px 0;
+    font-family: inherit;
+    font-weight: 700;
+    width: 160px;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.1s linear;
+    color: var(--color-white);
+  }
+  
+  .Button--purple {
+    background-color: var(--color-purple);
+  }
+  
+  .Button--blue {
+    background-color: var(--color-blue);
+  }
+  
+  .Button--black {
+    background-color: var(--color-light-black);
+  }
+  
+  .Button--red {
+    background-color: var(--color-red);
+  }
+  
+  .Button:hover {
+    opacity: 0.7;
+    transition: opacity 0.1s linear;
+  }
+  
+  

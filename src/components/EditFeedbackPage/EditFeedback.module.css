@@ -1,0 +1,7 @@
+.edit-feedback{
+    display: flex;
+    flex-direction: column;
+    font-family: "Jost", sans-serif;
+    margin: 50px 200px;
+    
+}

@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 import DropdownCategory from "./DropdownCategory";
-import axios from "axios";
+// import { axiosInstance } from "../../App";
 import "./FeedbackForm.css";
+import { Button } from "../Utils/Button";
+
+
 function FeedbackForm() {
- const[title, setTitle] = useState("");
- const[details, setDetails] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [details, setDetails] = useState("");
 
-
-
-  async function handleSubmit(event) {
-      event.preventDefault();
-      const requestBody = {title, details}
-      await axios.post('/feedbacks', requestBody).then(response => console.log(response));
-      setTitle('');
-      setDetails('');
-    
-  }
+  // async function handleSubmit(event) {
+  //   event.preventDefault();
+  //   try {
+  //     const resp = await axiosInstance.post("feedbacks", { title, details });
+  //     console.log(resp);
+  //   } catch (error) {
+  //     console.log("Error was found! ");
+  //   }
+  // }
 
   return (
     <div className="feedback_container">
       <div className="feedback_logo">
         <div className="logo-plus">
-          <i class="fa-solid fa-plus"></i>
+          <i className="fa-solid fa-plus"></i>
         </div>
       </div>
       <div className="feedback_content">
@@ -32,7 +34,12 @@ function FeedbackForm() {
           <label className="pb-3" htmlFor="">
             Add a short, descriptive headline
           </label>
-          <input type="text" className="feedback-input" value={title} onChange={(e)=>setTitle(e.target.value)}/>
+          <input
+            type="text"
+            className="feedback-input"
+            /*value={title}
+            onChange={(e) => setTitle(e.target.value)}*/
+          />
         </div>
 
         <div className="feedback_category">
@@ -40,7 +47,7 @@ function FeedbackForm() {
           <label className="pb-3" htmlFor="">
             Choose Category for your feedback
           </label>
-          <DropdownCategory/>
+          <DropdownCategory />
         </div>
         <div className="feedback_details pt-4">
           <h4 className="pb-2">Feedback Detail</h4>
@@ -48,12 +55,20 @@ function FeedbackForm() {
             Include any specific comments on what should be improved, added,
             etc.
           </label>
-          <input className="feedback_details_input" type="text" value = {details} onChange={(e)=>setDetails(e.target.value)} required />
+          <input
+            className="feedback_details_input"
+            type="text"
+           /* value={details}
+            onChange={(e) => setDetails(e.target.value)} */
+            required
+          />
         </div>
 
         <div className="feedback_buttons pt-5 pb-4">
           <button className="btn btn-cancel-feedback mx-2">Cancel</button>
-          <button onClick={handleSubmit} className="btn btn-add-feedback">Add Feedback</button>
+          <Button /*onClick={handleSubmit}*/ className="btn btn-add-feedback">
+            Add Feedback
+          </Button>
         </div>
       </div>
     </div>

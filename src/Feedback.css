@@ -1,19 +1,4 @@
-.btn-back {
-    background-color: transparent;
-    border: none;
-    margin-top: 20px;
-    position: relative;
-    left: 23%;
-    margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    color: #647196;
-    text-decoration: none;
-}
-.fa-angle-left{
-    color:  #4661E6;
-}
+
 
 
 .wrapper_feedback{
@@ -23,3 +8,29 @@
     margin: 20px 200px;
     
 }
+
+
+
+.btn-back {
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #647196;
+    text-decoration: none;
+    margin-bottom: 55px;
+    left: 24%;
+  }
+  
+  .fa-angle-left {
+    color: #4661e6;
+  }
+  .link-back {
+    color: #647196;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,111 @@
+.roadmap-body-container {
+  margin-top: 50px;
+}
+
+.single-roadmap-container {
+  background: #ffffff;
+  border-radius: 5px;
+  width: 350px;
+  margin-bottom: 24px;
+}
+.single-roadmap-content {
+  padding: 25px 32px 32px 32px;
+}
+.single-roadmap-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 80px;
+}
+.single-roadmap-top p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #647196;
+}
+.colored-div {
+  background: #f49f85;
+  border-radius: 5px 5px 0px 0px;
+  height: 6px;
+  width: 100%;
+}
+.colored-dot {
+  background: #f49f85;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+.single-roadmap-text h3 {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+  color: #3a4374;
+}
+
+.single-roadmap-text p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #647196;
+}
+
+.single-roadmap-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.number {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    background: #f2f4fe;
+    border-radius: 10px;
+    padding: 10px 20px;
+    height: 40px;
+    width: 70px;
+    font-size: 13px;
+  }
+  .number:hover{
+    background-color: #cdd4f2;;
+  }
+  .comment {
+    font-size: 18px;
+    color: #3a4374;
+    display: flex;
+    align-items: center;
+  }
+  .comment-icon{
+    color: #CDD2EE;
+    margin-right: 10px;
+    font-size: 25px;
+  }
+
+  .roadmap-section-content h4{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.25px;
+    color: #3A4374;
+  }
+
+  .roadmap-section-content p{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #647196;
+    margin-bottom: 32px;
+  }

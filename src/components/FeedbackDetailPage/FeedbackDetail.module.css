@@ -1,0 +1,156 @@
+.feedbackDetails-container {
+  padding: 80px 355px;
+}
+
+.feedbackDetails-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-back {
+  background-color: transparent;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #647196;
+  text-decoration: none;
+}
+
+.fa-angle-left {
+  color: #4661e6;
+}
+.link-back {
+  color: #647196;
+  text-decoration: none;
+}
+
+.section-middle {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  background-color: #fff;
+}
+.comment-container:not(:last-child) {
+  border-bottom: 1px solid rgb(140, 146, 179, 0.25) !important;
+}
+.comments-details {
+  padding: 24px;
+}
+
+.comment-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+}
+.comment-profile-img img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.comment-body p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #647196;
+  margin-left: 72px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.comment-reply a {
+  text-decoration: none;
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #4661e6;
+}
+
+.section-bottom {
+  background-color: #fff;
+  padding: 24px 34px;
+}
+
+.add-comment input {
+  background: #f7f8fd;
+  border-radius: 5px;
+  height: 80px;
+  width: 664px;
+  border: none;
+  outline: none;
+  margin: 30px 0;
+  padding-left: 20px;
+}
+.add-comment h4 {
+  font-family: "Jost";
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: -0.25px;
+  color: #3a4374;
+}
+.add-comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.add-comment-footer p {
+  font-family: "Jost";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #647196;
+}
+.replies {
+  margin-left: 72px;
+  border-left: 1px solid rgb(140, 146, 179, 0.2);
+}
+.single-reply {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.single-reply input {
+  margin-left: 72px;
+  width: 400px;
+  height: 70px;
+  padding-left: 20px;
+  background: #f7f8fd;
+  border: 1px solid #bdbec4;
+  border-radius: 5px;
+}
+.single-reply-btns {
+  display: flex;
+  flex-direction: column;
+}
+.replies-prof-img {
+  margin-left: 70px;
+}
+
+.edit-btn {
+  text-decoration: none;
+  background: #4661e6;
+  border-radius: 10px;
+  border: none;
+  color: #f2f2f2;
+  padding: 12px 24px;
+}
+.edit-btn:hover{
+  color: #f2f2f2;
+  background: #7C91F9;
+}
