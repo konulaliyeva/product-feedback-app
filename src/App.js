@@ -3,11 +3,11 @@ import HomePage from "./HomePage";
 import { Route, Routes } from "react-router-dom";
 import Feedback from "./Feedback";
 import axios from "axios";
-import EmptyPage from "./Components/EmptyPage/EmptyPage";
-import RoadmapPage from "./Components/RoadmapPage/RoadmapPage";
-import FeedbackDetail from "./Components/FeedbackDetailPage/FeedbackDetail";
-import SingleReply from "./Components/FeedbackDetailPage/SingleReply";
-import EditFeedback from "./Components/EditFeedbackPage/EditFeedback";
+import EmptyPage from "./components/EmptyPage/EmptyPage";
+import RoadmapPage from "./components/RoadmapPage/RoadmapPage";
+import FeedbackDetail from "./components/FeedbackDetailPage/FeedbackDetail";
+import SingleReply from "./components/FeedbackDetailPage/SingleReply";
+import EditFeedback from "./components/EditFeedbackPage/EditFeedback";
 
 export const axiosInstance = axios.create({
   baseURL: "http://localhost:8080/",

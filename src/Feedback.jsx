@@ -1,7 +1,8 @@
 import React from "react";
-import FeedbackForm from "./Components/FeedbackPage/FeedbackForm";
+import FeedbackForm from "./components/FeedbackPage/FeedbackForm";
 import { Link } from "react-router-dom";
 import "./Feedback.css";
+
 function Feedback() {
   return (
     <div className=" wrapper_feedback">

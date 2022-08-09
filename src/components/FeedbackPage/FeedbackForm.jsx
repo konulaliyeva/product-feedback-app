@@ -1,23 +1,29 @@
 import React, { useState } from "react";
-import DropdownCategory from "./DropdownCategory";
-// import { axiosInstance } from "../../App";
+import Button from "../Utils/Button";
 import "./FeedbackForm.css";
-import { Button } from "../Utils/Button";
+import { useDispatch } from "react-redux";
+import { insertFeedback } from "../../features/feedbacksSlice";
+import Dropdown from "../Utils/Dropdown";
 
+const dropdownOptions = ["UI", "UX", "Enhancement", "Bug", "Feature"];
 
 function FeedbackForm() {
-  // const [title, setTitle] = useState("");
-  // const [details, setDetails] = useState("");
+  const [title, setTitle] = useState("");
+  const [details, setDetails] = useState("");
+  const [buttonText, setButtonText] = useState("");
 
-  // async function handleSubmit(event) {
-  //   event.preventDefault();
-  //   try {
-  //     const resp = await axiosInstance.post("feedbacks", { title, details });
-  //     console.log(resp);
-  //   } catch (error) {
-  //     console.log("Error was found! ");
-  //   }
-  // }
+  const dispatch = useDispatch();
+
+  function handleSubmit() {
+    const feedback = {
+      title,
+      details,
+    };
+    dispatch(insertFeedback(feedback));
+  }
+  function handleChange(option) {
+    setButtonText(option);
+  }
 
   return (
     <div className="feedback_container">
@@ -37,8 +43,8 @@ function FeedbackForm() {
           <input
             type="text"
             className="feedback-input"
-            /*value={title}
-            onChange={(e) => setTitle(e.target.value)}*/
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
 
@@ -47,7 +53,15 @@ function FeedbackForm() {
           <label className="pb-3" htmlFor="">
             Choose Category for your feedback
           </label>
-          <DropdownCategory />
+          <Dropdown
+            width="lg"
+            options={dropdownOptions}
+            onChange={handleChange}
+            trigger={({ handleClick }) => (
+              <input className="catg-dropdown-input" type="text" value={buttonText} onClick={handleClick}/>
+            )}
+
+          />
         </div>
         <div className="feedback_details pt-4">
           <h4 className="pb-2">Feedback Detail</h4>
@@ -58,15 +72,15 @@ function FeedbackForm() {
           <input
             className="feedback_details_input"
             type="text"
-           /* value={details}
-            onChange={(e) => setDetails(e.target.value)} */
+            value={details}
+            onChange={(e) => setDetails(e.target.value)}
             required
           />
         </div>
 
         <div className="feedback_buttons pt-5 pb-4">
           <button className="btn btn-cancel-feedback mx-2">Cancel</button>
-          <Button /*onClick={handleSubmit}*/ className="btn btn-add-feedback">
+          <Button onClick={handleSubmit} className="btn btn-add-feedback">
             Add Feedback
           </Button>
         </div>

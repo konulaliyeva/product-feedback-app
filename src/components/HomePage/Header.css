@@ -31,3 +31,9 @@
 .add_btn:hover {
   color: #f2f4fe;
 }
+
+.header-catg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

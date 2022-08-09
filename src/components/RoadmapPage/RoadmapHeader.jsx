@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./RoadmapPage.module.css";
 import { NavLink, Link } from "react-router-dom";
+import Button from "../Utils/Button";
 function RoadmapHeader() {
   return (
     <div className={styles["roadmap-header-container"]}>
       <div className={styles["roadmap-header-content"]}>
         <div className={styles["roadmap-header-left"]}>
           <div className={styles["btn-back-roadmap"]}>
-            <i className={styles['angle']+ " fa-solid fa-angle-left mx-2"}></i>
+            <i className={styles["angle"] + " fa-solid fa-angle-left mx-2"}></i>
             <Link to="/" className={styles["link-back-roadmap"]}>
               Go back
             </Link>
@@ -16,9 +17,9 @@ function RoadmapHeader() {
         </div>
 
         <div className={styles["roadmap-header-right"]}>
-          <NavLink to="/feedback" className="add_btn">
-            + Add Feedback
-          </NavLink>
+          <Link to="/feedback">
+            <Button color="purple">+ Add Feedback</Button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,35 +1,39 @@
 .Button {
-    border-radius: 10px;
-    font-size: 14px;
-    padding: 13px 0;
-    font-family: inherit;
-    font-weight: 700;
-    width: 160px;
-    cursor: pointer;
-    border: none;
-    transition: opacity 0.1s linear;
-    color: var(--color-white);
-  }
-  
-  .Button--purple {
-    background-color: var(--color-purple);
-  }
-  
-  .Button--blue {
-    background-color: var(--color-blue);
-  }
-  
-  .Button--black {
-    background-color: var(--color-light-black);
-  }
-  
-  .Button--red {
-    background-color: var(--color-red);
-  }
-  
-  .Button:hover {
-    opacity: 0.7;
-    transition: opacity 0.1s linear;
-  }
-  
-  
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 13px 0;
+  font-family: inherit;
+  font-weight: 700;
+  width: 144px;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.1s linear;
+  color: #fff;
+}
+
+.Button--purple {
+  background-color: #c75af6;
+}
+
+.Button--blue {
+  background-color: #4661e6;
+}
+
+.Button--black {
+  background-color: #3a4374;
+  width: 93px;
+  margin-right: 10px;
+}
+
+.Button--red {
+  background-color: #e98888;
+  width: 93px;
+}
+.Button--transparent {
+  background-color: transparent;
+}
+
+.Button:hover {
+  opacity: 0.7;
+  transition: opacity 0.1s linear;
+}

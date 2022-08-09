@@ -17,7 +17,9 @@ function FeedbackDetail() {
                 Go back
               </Link>
             </div>
-            <NavLink to="/edit-feedback" className={styles['edit-btn']}>Edit Feedback</NavLink>
+            <Link to='/edit-feedback'>
+            <Button color="blue">Edit Feedback</Button>
+            </Link>
 
           </div>
           <Body />

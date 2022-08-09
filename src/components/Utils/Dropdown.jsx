@@ -1,6 +1,6 @@
-import classNames from 'classnames';
-import { useEffect, useRef, useState } from 'react';
-import classes from './Dropdown.module.css';
+import classNames from "classnames";
+import { useEffect, useRef, useState } from "react";
+import classes from "./Dropdown.module.css";
 
 function Dropdown({
   options = [],
@@ -8,13 +8,18 @@ function Dropdown({
   initialValue,
   initiallyOpen = false,
   onChange,
+  width
 }) {
   const dropdownRef = useRef();
   const [isOpen, setOpen] = useState(initiallyOpen);
   const [selectedOption, setSelectedOption] = useState(initialValue);
+  
+
 
   const contentClassName = classNames(classes.Dropdown__content, {
-    [classes['Dropdown__content--open']]: isOpen,
+    [classes["Dropdown__content--open"]]: isOpen,
+    [classes['Dropdown--width']]: width === 'lg',
+
   });
 
   function handleClick() {
@@ -28,7 +33,7 @@ function Dropdown({
   }
 
   function handleKeyUp(event, option) {
-    if (event.key === 'Enter') {
+    if (event.key === "Enter") {
       setSelectedOption(option);
       onChange && onChange(option);
       setOpen(false);
@@ -43,9 +48,9 @@ function Dropdown({
       }
     }
 
-    document.addEventListener('click', handleOutsideClick);
+    document.addEventListener("click", handleOutsideClick);
     return () => {
-      document.removeEventListener('click', handleOutsideClick);
+      document.removeEventListener("click", handleOutsideClick);
     };
   }, []);
 
@@ -60,7 +65,7 @@ function Dropdown({
             onClick={() => handleOptionClick(option)}
             onKeyUp={(event) => handleKeyUp(event, option)}
             className={classNames({
-              [classes['Option--selected']]: option === selectedOption,
+              [classes["Option--selected"]]: option === selectedOption,
             })}
           >
             {option}
@@ -71,4 +76,4 @@ function Dropdown({
   );
 }
 
-
+export default Dropdown;
