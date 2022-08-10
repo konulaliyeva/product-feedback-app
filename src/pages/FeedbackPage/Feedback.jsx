@@ -1,5 +1,5 @@
 import React from "react";
-import FeedbackForm from "./components/FeedbackPage/FeedbackForm";
+import FeedbackForm from "./FeedbackForm";
 import { Link } from "react-router-dom";
 import "./Feedback.css";
 

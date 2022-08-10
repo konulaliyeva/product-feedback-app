@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Utils/Button";
+import Button from "../../components/Utils/Button";
 import styles from "./EmptyPage.module.css";
 function EmptyPageBody() {
   return (

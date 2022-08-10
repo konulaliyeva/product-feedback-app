@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import Button from "../Utils/Button";
+import Button from "../../components/Utils/Button";
 import "./FeedbackForm.css";
 import { useDispatch } from "react-redux";
-import { insertFeedback } from "../../features/feedbacksSlice";
-import Dropdown from "../Utils/Dropdown";
+import { insertFeedback } from "../../components/features/feedbacksSlice";
+import Dropdown from "../../components/Utils/Dropdown";
 
 const dropdownOptions = ["UI", "UX", "Enhancement", "Bug", "Feature"];
 
 function FeedbackForm() {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
-  const [buttonText, setButtonText] = useState("");
+  const [tag, setTag] = useState("");
 
   const dispatch = useDispatch();
 
@@ -18,11 +18,13 @@ function FeedbackForm() {
     const feedback = {
       title,
       details,
+      tag,
+
     };
     dispatch(insertFeedback(feedback));
   }
   function handleChange(option) {
-    setButtonText(option);
+    setTag(option);
   }
 
   return (
@@ -58,7 +60,8 @@ function FeedbackForm() {
             options={dropdownOptions}
             onChange={handleChange}
             trigger={({ handleClick }) => (
-              <input className="catg-dropdown-input" type="text" value={buttonText} onClick={handleClick}/>
+              
+              <input className="catg-dropdown-input" type="text" value={tag} onClick={handleClick}/>
             )}
 
           />
@@ -80,7 +83,7 @@ function FeedbackForm() {
 
         <div className="feedback_buttons pt-5 pb-4">
           <button className="btn btn-cancel-feedback mx-2">Cancel</button>
-          <Button onClick={handleSubmit} className="btn btn-add-feedback">
+          <Button onClick={handleSubmit} color="purple">
             Add Feedback
           </Button>
         </div>

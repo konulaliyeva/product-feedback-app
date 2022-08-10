@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 // import { axiosInstance } from "../../App";
-import "../FeedbackPage/FeedbackForm.css";
-import Button from "../Utils/Button";
-import Dropdown from "../Utils/Dropdown";
+import "../../pages/FeedbackPage/FeedbackForm.css";
+import Button from "../../components/Utils/Button";
+import Dropdown from "../../components/Utils/Dropdown";
 import styles from "./EditFeedback.module.css";
 const dropdownOptions = ["UI", "UX", "Enhancement", "Bug", "Feature"];
 const progressOptions = ["Suggestion", "Planned", "In-Progress", "Live"];
 
 function EditFeedback() {
   const [state, setState] = useState({
-    category: '',
-    progress:''
-  }) 
-
+    category: "",
+    progress: "",
+  });
 
   // const [title, setTitle] = useState("");
   // const [details, setDetails] = useState("");
@@ -27,10 +26,9 @@ function EditFeedback() {
   //   }
   // }
   function handleChange(option, e) {
-    console.log(e.target.name)
     setState({
       ...state,
-      [e.target.name]: option
+      [e.target.name]: option,
     });
   }
 
@@ -64,13 +62,20 @@ function EditFeedback() {
             <Dropdown
               width="lg"
               options={dropdownOptions}
-              onChange={handleChange}
+              onChange={(value) => {
+                const event = {
+                  target: {
+                    name: "category",
+                  },
+                };
+                handleChange(value, event);
+              }}
               trigger={({ handleClick }) => (
                 <input
                   className="catg-dropdown-input"
                   type="text"
-                  name='category'
-                  value={state.category}
+                  name="category"
+                  defaultValue={state.category}
                   onClick={(e) => handleClick(e.target.value)}
                 />
               )}
@@ -85,20 +90,31 @@ function EditFeedback() {
             <Dropdown
               width="lg"
               options={progressOptions}
-              onChange={handleChange}
+              onChange={(value) => {
+                const event = {
+                  target: {
+                    name: "progress",
+                  },
+                };
+                handleChange(value, event);
+              }}
               trigger={({ handleClick }) => (
                 <input
                   className="catg-dropdown-input"
                   type="text"
-                  name='progress'
-                  value={state.progress}
+                  name="progress"
+                  defaultValue={state.progress}
                   onClick={(e) => handleClick(e.target.value)}
                 />
               )}
             />
           </div>
 
-          <div className="feedback_buttons pt-5 pb-4 d-flex justify-content-between">
+          <div
+            className={
+              styles["edit-btn"] + " pt-5 d-flex justify-content-between"
+            }
+          >
             <Button color="red">Delete</Button>
             <div>
               <Button color="black">Cancel</Button>

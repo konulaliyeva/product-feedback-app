@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Utils/Button";
+import Button from "../../components/Utils/Button";
 import styles from "./FeedbackDetail.module.css";
 import Body from "../HomePage/Body";
 import { Link, NavLink } from "react-router-dom";

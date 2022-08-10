@@ -8,18 +8,15 @@ function Dropdown({
   initialValue,
   initiallyOpen = false,
   onChange,
-  width
+  width,
 }) {
   const dropdownRef = useRef();
   const [isOpen, setOpen] = useState(initiallyOpen);
   const [selectedOption, setSelectedOption] = useState(initialValue);
-  
-
 
   const contentClassName = classNames(classes.Dropdown__content, {
     [classes["Dropdown__content--open"]]: isOpen,
-    [classes['Dropdown--width']]: width === 'lg',
-
+    [classes["Dropdown--width"]]: width === "lg",
   });
 
   function handleClick() {

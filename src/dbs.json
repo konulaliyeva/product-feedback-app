@@ -1,54 +1,16 @@
 {
   "feedbacks": [
     {
-      "id": 10,
-      "title": "Add tags for solution",
-      "details": "Easier to search for solutions based on a specific stack.",
-      "tag": "Enhancement",
-      "vote": "112",
-      "comment": "4"
-    },
-    {
-      "id": 11,
-      "title": "More comprehensive reports",
-      "details": "It would be great to see a more detailed breakdown of solutions.",
+      "title": "The 40 Best Free Fonts Available on Google Fonts",
+      "details": "These are the 40 best free web fonts available on Google Fonts, in my humble opinion. They are all open-source and 100% free for commercial use. This collection focuses on typeface families from reputable type designers and foundries that contain multiple weights and styles.",
       "tag": "Feature",
-      "vote": "123",
-      "comment": "2"
+      "id": 1
     },
     {
-      "id": 12,
-      "title": "Add a dark theme option",
-      "details": "It would help people with light sensitivities and who prefer dark mode.",
-      "tag": "Feature",
-      "vote": "101",
-      "comment": "7"
-    },
-    {
-      "id": 13,
-      "title": "Add micro-interactions",
-      "details": "Small animations at specific points can add delight.",
+      "title": "What is the significance of keys in React?",
+      "details": "Keys in React are used to identify unique VDOM Elements with their corresponding data driving the UI; having them helps React optimize rendering by recycling existing DOM elements. Let’s look at an example to portray this.",
       "tag": "Enhancement",
-      "vote": "71",
-      "comment": "5"
-    },
-    {
-      "title": "Salam feedback",
-      "details": "Sagol feedback",
-      "id": 14
-    },
-    {
-      "title": "new",
-      "details": "when",
-      "id": 15
-    },
-    {
-      "id": 16
-    },
-    {
-      "title": "asdsad",
-      "details": "asdasd",
-      "id": 17
+      "id": 2
     }
   ]
 }

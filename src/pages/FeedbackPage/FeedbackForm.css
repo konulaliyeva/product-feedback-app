@@ -1,6 +1,6 @@
 .feedback_container {
   width: 540px;
-  height: 810px;
+  height: 860px;
   background-color: #fff;
   border-radius: 10px;
   margin: auto;
@@ -53,28 +53,11 @@
 
 .feedback_buttons {
   display: flex;
-  position: relative;
   justify-content: flex-end;
 }
-.btn-cancel-feedback {
-  background: #3a4374;
-  border-radius: 10px;
-  color: #fff;
-}
 
-.btn-add-feedback {
-  background: #ad1fea;
-  border-radius: 10px;
-  color: #fff;
-}
-.btn-add-feedback:hover {
-  background-color: #a337f6;
-  color: #f7f8fd;
-}
-.btn-cancel-feedback:hover {
-  background-color: #3a4374;
-  color: #f7f8fd;
-}
+
+
 .catg-dropdown-input {
   height: 48px;
   width: 456px;

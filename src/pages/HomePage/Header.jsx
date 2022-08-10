@@ -1,8 +1,10 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Dropdown from "../Utils/Dropdown";
-import Button from "../Utils/Button";
+import Dropdown from "../../components/Utils/Dropdown";
+import Button from "../../components/Utils/Button";
+import { getFeedbacks } from "../../components/features/feedbacksSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const dropdownOptions = [
   "Most upvotes",
@@ -13,7 +15,11 @@ const dropdownOptions = [
 
 function Header() {
   const [buttonText, setButtonText] = useState("Most Upvotes");
-
+  const dispatch = useDispatch();
+  const {feedbacks} = useSelector(state=> state.feedbacks);
+  useEffect(()=>{
+   dispatch(getFeedbacks())
+  });
   function handleChange(option) {
     setButtonText(option);
   }
@@ -22,7 +28,7 @@ function Header() {
     <div className="header_container">
       <div className="header_left">
         <i className="fas fa-lightbulb"></i>
-        <p className="suggestions">6 Suggetions</p>
+        <p className="suggestions">{feedbacks.length} Suggetions</p>
 
         <div className="header-catg">
           <span>Sort by:</span>
