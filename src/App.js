@@ -6,7 +6,6 @@ import axios from "axios";
 import EmptyPage from "./pages/EmptyPage/EmptyPage";
 import RoadmapPage from "./pages/RoadmapPage/RoadmapPage";
 import FeedbackDetail from "./pages/FeedbackDetailPage/FeedbackDetail";
-import SingleReply from "./pages/FeedbackDetailPage/SingleReply";
 import EditFeedback from "./pages/EditFeedbackPage/EditFeedback";
 
 export const axiosInstance = axios.create({
@@ -21,9 +20,7 @@ function App() {
         <Route path="/empty" element={<EmptyPage />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/roadmap" element={<RoadmapPage />} />
-        <Route path="/feedback-detail" element={<FeedbackDetail />}>
-          <Route path=":single-reply" element={<SingleReply />} />
-        </Route>
+        <Route path="/feedback-detail/:id" element={<FeedbackDetail />}/>
         <Route path="/edit-feedback" element={<EditFeedback/>} />
       </Routes>
     </>

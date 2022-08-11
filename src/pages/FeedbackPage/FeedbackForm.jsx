@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Button from "../../components/Utils/Button";
-import "./FeedbackForm.css";
+import Button from "../../components/Button";
+import "./Feedback.css";
 import { useDispatch } from "react-redux";
-import { insertFeedback } from "../../components/features/feedbacksSlice";
-import Dropdown from "../../components/Utils/Dropdown";
+import { insertFeedback } from "../../features/feedbacksSlice";
+import Dropdown from "../../components/Dropdown";
 
 const dropdownOptions = ["UI", "UX", "Enhancement", "Bug", "Feature"];
 
@@ -22,6 +22,10 @@ function FeedbackForm() {
 
     };
     dispatch(insertFeedback(feedback));
+    setTitle('');
+    setDetails('');
+    setTag('');
+    
   }
   function handleChange(option) {
     setTag(option);

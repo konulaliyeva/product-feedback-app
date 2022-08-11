@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterSlice from "./components/features/counterSlice";
-import feedbacksSlice from "./components/features/feedbacksSlice";
+import feedbacksSlice from "./features/feedbacksSlice";
 const store = configureStore({
   reducer: {
     feedbacks: feedbacksSlice,
-    counter: counterSlice,
   },
 });
 

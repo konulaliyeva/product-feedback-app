@@ -1,8 +1,8 @@
 import React from "react";
-import "./Roadmap.css";
+import "./Roadmaps.css";
 import { Link } from "react-router-dom";
 
-function Roadmap() {
+function Roadmaps() {
   return (
     <div className="roadmap_board px-3 py-3 pb-5">
       <div className="roadmap_title">
@@ -30,4 +30,4 @@ function Roadmap() {
   );
 }
 
-export default Roadmap;
+export default Roadmaps;

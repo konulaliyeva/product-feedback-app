@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./RoadmapPage.module.css";
 import {Link } from "react-router-dom";
-import Button from "../../components/Utils/Button";
+import Button from "../../components/Button";
 function RoadmapHeader() {
   return (
     <div className={styles["roadmap-header-container"]}>

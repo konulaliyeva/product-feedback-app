@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../HomePage/Header";
-import FeedbackBoard from "../HomePage/FeedbackBoard";
-import Category from "../HomePage/Category";
-import Roadmap from "../HomePage/Roadmap";
+import Header from "../../components/Header";
+import FeedbackBoard from "../HomePage/Banners";
+import Categories from "../../components/Categories";
+import Roadmaps from "../../components/Roadmaps";
 import EmptyPageBody from "./EmptyBageBody";
 
 
@@ -11,8 +11,8 @@ function EmptyPage(){
         <div className="container wrap_home">
         <div className="page_left">
             <FeedbackBoard />
-            <Category />
-            <Roadmap />
+            <Categories />
+            <Roadmaps />
 
         </div>
         <div className="page_right">

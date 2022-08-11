@@ -1,18 +1,18 @@
-import React, { useState } from "react";
-import FeedbackBoard from "./FeedbackBoard";
-import Category from "./Category";
-import Roadmap from "./Roadmap";
-import Header from "./Header";
+import React from "react";
+import Categories from "../../components/Categories";
+import Roadmaps from "../../components/Roadmaps";
+import Header from "../../components/Header";
 import Body from "./Body";
 import "./HomePage.css";
+import Banner from "./Banners";
 
 function HomePage() {
   return (
     <div className="container wrap_home">
       <div className="page_left">
-        <FeedbackBoard />
-        <Category />
-        <Roadmap />
+        <Banner/>
+        <Categories />
+        <Roadmaps />
       </div>
       <div className="page_right">
         <Header />

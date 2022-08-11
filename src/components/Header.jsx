@@ -1,10 +1,9 @@
-import { React, useEffect, useState } from "react";
+import { React,useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import Dropdown from "../../components/Utils/Dropdown";
-import Button from "../../components/Utils/Button";
-import { getFeedbacks } from "../../components/features/feedbacksSlice";
-import { useDispatch, useSelector } from "react-redux";
+import Dropdown from "./Dropdown";
+import Button from "./Button";
+import {useSelector } from "react-redux";
 
 const dropdownOptions = [
   "Most upvotes",
@@ -15,11 +14,8 @@ const dropdownOptions = [
 
 function Header() {
   const [buttonText, setButtonText] = useState("Most Upvotes");
-  const dispatch = useDispatch();
   const {feedbacks} = useSelector(state=> state.feedbacks);
-  useEffect(()=>{
-   dispatch(getFeedbacks())
-  });
+ 
   function handleChange(option) {
     setButtonText(option);
   }

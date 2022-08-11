@@ -1,6 +1,6 @@
 import React from "react";
-import "./FeedbackBoard.css";
-function FeedbackBoard() {
+import "./HomePage.css";
+function Banner() {
   return (
     <div className="mentor_board">
       <div className="mentor_board_content">
@@ -11,4 +11,4 @@ function FeedbackBoard() {
   );
 }
 
-export default FeedbackBoard;
+export default Banner;

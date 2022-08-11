@@ -1,26 +1,28 @@
-import React from "react";
-import "./Body.css";
+import React, { useState } from "react";
+import "./HomePage.css";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getFeedbacks } from "../../components/features/feedbacksSlice";
-import { increment, decrement } from "../../components/features/counterSlice";
+import { getFeedbacks, increment} from "../../features/feedbacksSlice";
 function Body() {
   const dispatch = useDispatch();
-  const { feedbacks, loading, error } = useSelector((state) => state.feedbacks);
-
+  const { feedbacks, counter} = useSelector((state) => state.feedbacks);
+  const voted = useSelector((state)=> state.feedbacks.isClicked)
   useEffect(() => {
     dispatch(getFeedbacks());
-  }, []);
+  }, [dispatch]);
 
-  const counter = useSelector((state) => state.counter.counter);
-  const voted = useSelector(state=> state.counter.isClicked);
-
+  
   function handleVote (id){
-    let targetedVote= feedbacks.find(feedbackItem=> feedbackItem.id === id);
-    console.log(targetedVote);
+    // let targetedVote= feedbacks.map(feedbackItem=> {
+    //   if(feedbackItem.id === id){
+    //    return {...feedbackItem, count: counter}
+    //   }
+    // });
     dispatch(increment());
   }
+  console.log(feedbacks)
+
   return (
     <>
       {feedbacks.map((feedback) => {
@@ -36,7 +38,7 @@ function Body() {
                     <i className="fa-solid fa-angle-up"></i>
                     <p>{counter}</p>
                   </button>
-                  <Link to="/feedback-detail" style={{ textDecoration: "none" }}> 
+                  <Link to={`/feedback-detail/${feedback.id}`} style={{ textDecoration: "none" }}> 
                   <div className="content">
                     <h4>{feedback.title}</h4>
                     <p>{feedback.details}</p>

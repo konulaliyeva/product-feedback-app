@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // import { axiosInstance } from "../../App";
-import "../../pages/FeedbackPage/FeedbackForm.css";
-import Button from "../../components/Utils/Button";
-import Dropdown from "../../components/Utils/Dropdown";
+import "../../pages/FeedbackPage/Feedback.css";
+import Button from "../../components/Button";
+import Dropdown from "../../components/Dropdown";
 import styles from "./EditFeedback.module.css";
 const dropdownOptions = ["UI", "UX", "Enhancement", "Bug", "Feature"];
 const progressOptions = ["Suggestion", "Planned", "In-Progress", "Live"];
@@ -13,18 +13,7 @@ function EditFeedback() {
     progress: "",
   });
 
-  // const [title, setTitle] = useState("");
-  // const [details, setDetails] = useState("");
-
-  // async function handleSubmit(event) {
-  //   event.preventDefault();
-  //   try {
-  //     const resp = await axiosInstance.post("feedbacks", { title, details });
-  //     console.log(resp);
-  //   } catch (error) {
-  //     console.log("Error was found! ");
-  //   }
-  // }
+  
   function handleChange(option, e) {
     setState({
       ...state,

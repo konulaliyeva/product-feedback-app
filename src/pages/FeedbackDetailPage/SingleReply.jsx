@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Utils/Button";
+import Button from "../../components/Button";
 import styles from "./FeedbackDetail.module.css";
 function SingleReply() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Category.css";
+import "./Categories.css";
 
-function Category() {
+function Categories() {
   return (
     <div className="category_board px-3 py-3 pb-5">
       <div className="d-flex">
@@ -18,4 +18,4 @@ function Category() {
   );
 }
 
-export default Category;
+export default Categories;

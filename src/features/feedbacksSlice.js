@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { axiosInstance } from "../../App";
-
+import { axiosInstance } from "../App";
 export const insertFeedback = createAsyncThunk(
   "feedbacks/insertFeedback",
   async (data, { dispatch }) => {
@@ -10,9 +9,9 @@ export const insertFeedback = createAsyncThunk(
 );
 
 export const getFeedbacks = createAsyncThunk(
-  'feedbacks/getFeedbacks',
+  "feedbacks/getFeedbacks",
   async function () {
-    const response = await axiosInstance.get('feedbacks');
+    const response = await axiosInstance.get("feedbacks");
     return response.data;
   }
 );
@@ -22,6 +21,8 @@ const initialState = {
   loading: false,
   error: null,
   suggestionLength: 0,
+  counter: 0,
+  isClicked: false,
 };
 
 const feedbacksSlice = createSlice({
@@ -29,11 +30,16 @@ const feedbacksSlice = createSlice({
   initialState,
   reducers: {
     addFeedback(state, action) {
-      const newTodo = action.payload;
-      state.feedbacks.push(newTodo);
+      const newFeedback = action.payload;
+      state.feedbacks.push(newFeedback);
     },
-
-   
+    increment: (state) => {
+      state.counter += 1;
+      state.isClicked = true;
+    },
+    decrement: (state) => {
+      state.counter -= 1;
+    },
   },
   extraReducers: {
     [getFeedbacks.pending]: (state) => {
@@ -45,13 +51,10 @@ const feedbacksSlice = createSlice({
     },
     [getFeedbacks.rejected]: (state, action) => {
       state.loading = false;
-      state.error = 'error!';
+      state.error = "error!";
     },
   },
 });
 
-
-
-export const { addFeedback } = feedbacksSlice.actions;
+export const { addFeedback, increment, decrement } = feedbacksSlice.actions;
 export default feedbacksSlice.reducer;
-
