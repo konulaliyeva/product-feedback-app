@@ -38,8 +38,7 @@ function EditFeedback() {
             <input
               type="text"
               className="feedback-input"
-              //   value={title}
-              // onChange={(e) => setTitle(e.target.value)}
+             
             />
           </div>
 

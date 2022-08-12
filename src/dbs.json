@@ -1,21 +1,23 @@
 {
   "feedbacks": [
     {
-      "title": "Aşk",
-      "details": "Yandik sevda ocağinda, Hep gül olsun kucağinda, Bu şehrin her sokağinda, Aşkimizin izi kaldi, Çoğu gitti azı kaldı..",
-      "tag": "Feature",
-      "id": 3
-    },
-    {
-      "title": "The 40 Best Free Fonts Available on Google Fonts",
-      "details": "These are the 40 best free web fonts available on Google Fonts, in my humble opinion. They are all open-source and 100% free for commercial use. This collection focuses on typeface families from reputable type designers and foundries that contain multiple weights and styles.",
-      "tag": "Feature",
+      "title": "Declarative",
+      "details": "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.",
+      "state": {
+        "category": "Feature",
+        "progress": "Planned"
+      },
+      "counter": 0,
       "id": 1
     },
     {
-      "title": "What is the significance of keys in React?",
-      "details": "Keys in React are used to identify unique VDOM Elements with their corresponding data driving the UI; having them helps React optimize rendering by recycling existing DOM elements. Let’s look at an example to portray this.",
-      "tag": "Enhancement",
+      "title": "Component-Based",
+      "details": "Build encapsulated components that manage their own state, then compose them to make complex UIs.Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.",
+      "state": {
+        "category": "Bug",
+        "progress": "Live"
+      },
+      "counter": 0,
       "id": 2
     }
   ]

@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./RoadmapBody.module.css";
 import SingleRoadmap from "./SingleRoadmap";
 function RoadmapBody() {
+
   return (
     <div className={styles["roadmap-body-container"]}>
       <div className="container">
@@ -11,8 +12,7 @@ function RoadmapBody() {
               <div className={styles["roadmap-section-content"]}>
                 <h4>Planned (2)</h4>
                 <p>Ideas prioritized for research</p>
-                <SingleRoadmap />
-                <SingleRoadmap />
+               <SingleRoadmap/>
               </div>
             </div>
           </div>
@@ -21,9 +21,7 @@ function RoadmapBody() {
               <div className={styles["roadmap-section-content"]}>
                 <h4>In-Progress (3)</h4>
                 <p>Currently being developed</p>
-                <SingleRoadmap />
-                <SingleRoadmap />
-                <SingleRoadmap />
+               
 
               </div>
             </div>
@@ -33,7 +31,6 @@ function RoadmapBody() {
               <div className={styles["roadmap-section-content"]}>
                 <h4>Live (1)</h4>
                 <p>Released features</p>
-                <SingleRoadmap />
 
               </div>
             </div>

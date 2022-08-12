@@ -1,20 +1,21 @@
 import React from "react";
 import Button from "../../components/Button";
 import styles from "./FeedbackDetail.module.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import SingleComment from "./SingleComment";
 import AddComment from "./AddComment";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import VoteButton from "../../components/VoteButton";
 
 function FeedbackDetail() {
   const params = useParams();
-  const { feedbacks, counter} = useSelector((state) => state.feedbacks);
-  const voted = useSelector((state)=> state.feedbacks.isClicked)
+  const { feedbacks } = useSelector((state) => state.feedbacks);
 
   let singleFeedback = feedbacks.find(
     (feedbackItem) => feedbackItem.id === Number(params.id)
   );
+
   return (
     <div className={styles["feedbackDetails-container"]}>
       <div className={styles["feedbackDetails-content"]}>
@@ -33,10 +34,7 @@ function FeedbackDetail() {
           <div className="suggestion_container">
             <div className="suggestion_content">
               <div className="container_number_content">
-                <button className={`number ${voted && "voted"}`}>
-                  <i className="fa-solid fa-angle-up"></i>
-                  <p>{counter}</p>
-                </button>
+                <VoteButton count={singleFeedback.counter} />
                 <div className="content">
                   <h4>{singleFeedback.title}</h4>
                   <p>{singleFeedback.details}</p>

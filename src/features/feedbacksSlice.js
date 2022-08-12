@@ -1,20 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { axiosInstance } from "../App";
-export const insertFeedback = createAsyncThunk(
-  "feedbacks/insertFeedback",
-  async (data, { dispatch }) => {
-    dispatch(addFeedback(data));
-    return axiosInstance.post("feedbacks", data);
-  }
-);
+import {createSlice } from '@reduxjs/toolkit';
+import { getFeedbacks } from '../api/feedbacksAPI';
 
-export const getFeedbacks = createAsyncThunk(
-  "feedbacks/getFeedbacks",
-  async function () {
-    const response = await axiosInstance.get("feedbacks");
-    return response.data;
-  }
-);
 
 const initialState = {
   feedbacks: [],
@@ -22,24 +8,35 @@ const initialState = {
   error: null,
   suggestionLength: 0,
   counter: 0,
-  isClicked: false,
+  isClicked: false, 
+  status: ''
 };
 
 const feedbacksSlice = createSlice({
-  name: "feedbacks",
+  name: 'feedbacks',
   initialState,
   reducers: {
     addFeedback(state, action) {
       const newFeedback = action.payload;
       state.feedbacks.push(newFeedback);
     },
-    increment: (state) => {
-      state.counter += 1;
-      state.isClicked = true;
+    increment: (state, action) => {
+      let id = action.payload;
+     let feedback = state.feedbacks.find((feedback) => feedback.id === id);
+     feedback.counter ++;
+    feedback.isClicked = true;
     },
-    decrement: (state) => {
-      state.counter -= 1;
-    },
+    decrement: (state, action) => {
+      let id = action.payload;
+      let feedback = state.feedbacks.find((feedback) => feedback.id === id);
+      feedback.counter --;
+     feedback.isClicked = false;
+    }, 
+    postStatus(state, action){
+      const newStatus = action.payload;
+      state.status.push(newStatus);
+      }
+  
   },
   extraReducers: {
     [getFeedbacks.pending]: (state) => {
@@ -51,10 +48,10 @@ const feedbacksSlice = createSlice({
     },
     [getFeedbacks.rejected]: (state, action) => {
       state.loading = false;
-      state.error = "error!";
-    },
-  },
+      state.error = 'error!';
+    }
+  }
 });
 
-export const { addFeedback, increment, decrement } = feedbacksSlice.actions;
+export const { addFeedback, increment,decrement, postStatus } = feedbacksSlice.actions;
 export default feedbacksSlice.reducer;

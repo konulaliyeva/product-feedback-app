@@ -2,35 +2,40 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import "./Feedback.css";
 import { useDispatch } from "react-redux";
-import { insertFeedback } from "../../features/feedbacksSlice";
 import Dropdown from "../../components/Dropdown";
+import { insertFeedback } from "../../api/feedbacksAPI";
 
 const dropdownOptions = ["UI", "UX", "Enhancement", "Bug", "Feature"];
+const progressOptions = ["Suggestion", "Planned", "In-Progress", "Live"];
 
 function FeedbackForm() {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
-  const [tag, setTag] = useState("");
+  const [state, setState] = useState({
+    category: "",
+    progress: "",
+  });
 
+  function handleChange(option, e) {
+    setState({
+      ...state,
+      [e.target.name]: option,
+    });
+  }
   const dispatch = useDispatch();
 
   function handleSubmit() {
     const feedback = {
       title,
       details,
-      tag,
-
+      state,
+      counter: 0,
     };
     dispatch(insertFeedback(feedback));
-    setTitle('');
-    setDetails('');
-    setTag('');
-    
+    setTitle("");
+    setDetails("");
+    setState("");
   }
-  function handleChange(option) {
-    setTag(option);
-  }
-
   return (
     <div className="feedback_container">
       <div className="feedback_logo">
@@ -62,12 +67,51 @@ function FeedbackForm() {
           <Dropdown
             width="lg"
             options={dropdownOptions}
-            onChange={handleChange}
+            onChange={(value) => {
+              const event = {
+                target: {
+                  name: "category",
+                },
+              };
+              handleChange(value, event);
+            }}
             trigger={({ handleClick }) => (
-              
-              <input className="catg-dropdown-input" type="text" value={tag} onClick={handleClick}/>
+              <input
+                className="catg-dropdown-input"
+                type="text"
+                name="category"
+                defaultValue={state.category}
+                onClick={(e) => handleClick(e.target.value)}
+              />
             )}
+          />
+        </div>
 
+        <div className="feedback_category mt-4 mb-4">
+          <h4 className="pb-2">Update status</h4>
+          <label className="pb-3" htmlFor="">
+            Choose Category for your feedback
+          </label>
+          <Dropdown
+            width="lg"
+            options={progressOptions}
+            onChange={(value) => {
+              const event = {
+                target: {
+                  name: "progress",
+                },
+              };
+              handleChange(value, event);
+            }}
+            trigger={({ handleClick }) => (
+              <input
+                className="catg-dropdown-input"
+                type="text"
+                name="progress"
+                defaultValue={state.progress}
+                onClick={(e) => handleClick(e.target.value)}
+              />
+            )}
           />
         </div>
         <div className="feedback_details pt-4">
