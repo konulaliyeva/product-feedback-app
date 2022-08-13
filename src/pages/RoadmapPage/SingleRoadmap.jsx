@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import styles from "./RoadmapBody.module.css";
 function SingleRoadmap() {
   const {feedbacks} = useSelector(state=> state.feedbacks);
-
   return (
     <>
     {feedbacks.map(feedback=>{
