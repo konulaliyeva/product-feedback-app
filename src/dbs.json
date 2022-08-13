@@ -19,6 +19,26 @@
       },
       "counter": 0,
       "id": 2
+    },
+    {
+      "title": "Quantum Relationship: Keeping Your Love Connected",
+      "details": "The experience of falling in love is altogether reminiscent of what in quantum physics is known as entanglement.  In the microscopic realm, once two particles experience a shared state, they are no longer separate entities but exist as one. This remains true even when they are separated by a great distance. The \"falling\" part of the falling in love process requires a falling away of many individual boundaries as the two people merge significant parts of themselves.",
+      "state": {
+        "category": "UI",
+        "progress": "Planned"
+      },
+      "counter": 0,
+      "id": 3
+    },
+    {
+      "title": "The  Triangular Theory of Love",
+      "details": "According to the triangular theory of love developed by psychologist Robert Sternberg, the three components of love are intimacy, passion, and commitment. Intimacy encompasses feelings of attachment, closeness, connectedness, and bondedness. Passion encompasses drives connected to both limerance and sexual attraction. Commitment encompasses, in the short term, the decision to remain with another, and in the long term, the shared achievements and plans made with that other person.",
+      "state": {
+        "category": "UX",
+        "progress": "In-Progress"
+      },
+      "counter": 0,
+      "id": 4
     }
   ]
 }

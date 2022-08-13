@@ -1,11 +1,17 @@
-.edit-feedback{
-    display: flex;
-    flex-direction: column;
-    font-family: "Jost", sans-serif;
-    margin: 50px 200px;
-    
+.edit-feedback {
+  display: flex;
+  flex-direction: column;
+  font-family: "Jost", sans-serif;
+  margin: 50px 200px;
 }
 
-.edit-btn{
-    margin-top: 40px;
+.edit-btn {
+  margin-top: 40px;
+}
+
+.btn-back {
+  position: relative;
+  left: 31%;
+  margin-top: 20px;
+
 }
